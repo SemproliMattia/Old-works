@@ -1,0 +1,25 @@
+﻿<Window x:Class="semproli.mattia._3h.Fantacalcio.FinTut"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:semproli.mattia._3h.Fantacalcio"
+        mc:Ignorable="d"
+        Title="FinTut" Height="425" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid Background="LightCyan">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Margin="10,10,10,05" TextWrapping="WrapWithOverflow">Ciao, non conosci le regole del fantacalcio o non sai cosa sia? 
+            Nessun problema te lo spiego ora. 
+            E' semplice, Il fantacalcio è un gioco a punti in cui ogni partecipante forma una squadra immaginaria composta da calciatori reali appartenenti a un determinato campionato.
+            Lo scopo del gioco è quello di fare più punti degli altri al termine del campionato (ad esempio la serie A), sommando i punteggi che i calciatori “schierati in campo” dal giocatore conseguono nelle pagelle dei quotidiani sportivi al termine di ogni giornata di campionato.
+            Una variante rispetto al classico torneo di fantacalcio a somma punti appena descritto (in cui tutti giocano contro tutti) prevede un torneo a scontro diretto tra i singoli giocatori(ogni giornata è a se, tra i vari scontri diretti chi farà più punti vincerà). Al termine di ogni giornata vengono assegnati 3 punti per la partita vinta, 1 punto per la partita pareggiata e zero punti per la partita persa. Vince il torneo chi ottiene più punti al termine del campionato.
+            In questo fantacalcio gli utenti avranno una squadra formata da 10 giocatori totali, di cui ogni partita devi scherarne 5 titolari e 3 panchinari. Ci sarò la sezione mercato in cui potrai vendere o acquistare giocatori. Penso di aver detto tutto, Clicca il campo per gioacare e... Buon gioco!!!
+        </TextBlock>
+        <Button Click="To_Home" Grid.Row="1" Margin="125,10,125,10">
+            <Image Source="Img/campo.jpg" Stretch="Fill"></Image>
+        </Button>
+    </Grid>
+</Window>

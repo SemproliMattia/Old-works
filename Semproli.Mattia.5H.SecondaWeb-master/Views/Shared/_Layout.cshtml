@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/html5up-highlights/assets/css/main.css" />
+		    <link rel="stylesheet" href="~/css/site.css" />
+	</head>
+	<body class="is-preload">
+		<header>
+		        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Elenco">Elenco</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Upload">Upload</a>
+                        </li>
+						@if(!User.Identity.IsAuthenticated)
+						{	
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account"
+                                asp-action="Registra">SignIn</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account"
+                                asp-action="Login">LogIn</a>
+                        </li>
+						}else{
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account"
+                                asp-action="LogOut">LogOut</a>
+                        </li>
+						}
+                    </ul>
+                </div>
+        </nav>
+		</header>
+		<section id="one" class="main special">
+				<div class="container">
+					<span class="image fit primary"><img src="images/pic01.jpg" alt="" /></span>
+					<div class="content" >
+						@RenderBody()
+					</div>
+					<a href="#two" class="goto-next scrolly">Next</a>
+				</div>
+				<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; 2020 - Semproli Mattia 5h ITTS RIMINI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+					</ul>
+				</footer>
+			</section>
+		<!-- Scripts -->
+			<script src="~/lib/jquery/dist/jquery.min.js"></script>
+			<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+			<script src="~/js/site.js" asp-append-version="true"></script>
+			@await RenderSectionAsync("Scripts", required: false)
+			<script src="/html5up-highlights/assets/js/jquery.min.js"></script>
+			<script src="/html5up-highlights/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/html5up-highlights/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/html5up-highlights/assets/js/browser.min.js"></script>
+			<script src="/html5up-highlights/assets/js/breakpoints.min.js"></script>
+			<script src="/html5up-highlights/assets/js/util.js"></script>
+			<script src="/html5up-highlights/assets/js/main.js"></script>
+
+	</body>
+</html>

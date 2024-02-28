@@ -1,0 +1,42 @@
+@model semproli.mattia._5H.SecondaWeb.Models.Prenotazione;
+@{
+    ViewData["Title"] = "Prenota";
+}
+
+<html>
+
+	<head>
+		<title>Reserve</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+<body class="is-preload">
+
+  <header>
+
+      <h1 class="display-4">Reserve</h1>
+        <form class="m-2" method="POST" asp-action="Prenota">
+
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+              <input asp-for="Nome" type="text" name="Nome" id="Nome" placeholder="Name"/>
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input asp-for="Email" type="email" name="Email" id="Email" placeholder="Email"/>
+            </div>
+            <div class="col-12">
+              <ul class="actions special">
+                <li><input type="submit" value="Reserve" class="primary"/></li>
+              </ul>
+            </div>
+					</div>
+        </form>
+
+    </div>
+    
+  </header>
+  
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+			<section id="header">
+				<header class="major">
+					<h1 style="color:#6f7577;">WELCOME</h1>
+					<p>
+						<a style="color: #6f7577;" class="navbar-brand" asp-area="" asp-controller="Account" asp-action="Login">LogIn</a>
+					</p>
+				</header>
+			</section>
+
+			<section id="one" class="main special">
+				<div class="container">
+					<span class="image fit primary"><img src="images/pic01.jpg" alt="" /></span>
+					<div class="content">
+						<span class="icon solid major fa-home"></span>
+						<header class="major">
+							<h2><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a></h2>
+						</header>
+						<p>Hi, my name is mattia and this is my site, you can continue browsing or go back to the home, good continuation!</p>
+					</div>
+					<a href="#two" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+			<section id="two" class="main special">
+				<div class="container">
+					<span class="image fit primary"><img src="images/pic02.jpg" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<h2>Ok, let's get started!</h2>
+						</header>
+						<p>Log in if you already have an account, if not register!</p>
+						<ul class="icons-grid">
+							@if(!User.Identity.IsAuthenticated)
+							{	
+								<li>
+									<span class="icon solid major fa-lock"></span>
+									<h3>
+										<a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+									</h3>					
+								</li>
+								<li>
+									<span class="icon solid major fa-pencil-alt"></span>
+									<h3>
+										<a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Registra">Signin</a>
+									</h3>
+								</li>
+							}
+							else
+							{
+								<li>
+									<span class="icon solid major fa-pencil-alt"></span>
+									<h3>
+										<a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="LogOut">Logout</a>
+									</h3>
+								</li>
+							}
+						</ul>
+					</div>
+					<a href="#three" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+
+			<section id="three" class="main special">
+				<div class="container">
+					<span class="image fit primary"><img src="images/pic03.jpg" alt="" /></span>
+					<div class="content">
+						<header class="major">
+							<h2>You can do more!</h2>
+						</header>
+						<p>You can upload a list, make a reservation, see the list of reserved or watch site's privacy policy!</p>
+						<ul class="icons-grid">
+							<li>
+								<span class="icon solid major fa-code"></span>
+								<h3>
+									<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Elenco">List</a>
+								</h3>
+							</li>
+							<li>
+								<span class="icon solid major fa-coffee"></span>
+								<h3>
+									<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Prenota">Reserve</a>
+								</h3>
+							</li>
+							<li>
+								<span class="icon solid major fa-book"></span>
+								<h3>
+									<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Upload">Upload</a>
+								</h3>
+							</li>
+							<li>
+								<span class="icon solid major fa-sign"></span>
+								<h3>
+									<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+								</h3>
+							</li>
+						</ul>
+					</div>
+					<a href="#footer" class="goto-next scrolly">Next</a>
+				</div>
+			</section>
+			<section id="footer">
+				<div class="container">
+					<span class="icon solid major fa-hands"></span>
+					<header class="major">
+						<h2>Bye Bye !!</h2>
+					</header>
+					<p>Here we are at the end of the trip, I hope it was to his/your liking, see you soon !!</p>
+				</div>
+				<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; 2020 - Semproli Mattia 5h ITTS RIMINI - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+					</ul>
+				</footer>
+			</section>

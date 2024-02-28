@@ -1,0 +1,31 @@
+﻿<Window x:Class="semproli.mattia._3h.Fantacalcio.FinChamp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:semproli.mattia._3h.Fantacalcio"
+        mc:Ignorable="d"
+        Title="FinChamp" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="Img\match.jpg" Grid.ColumnSpan="2" Opacity="0.75"></Image>
+        
+        <Button x:Name="back" Click="Back_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="150" Height="35" Margin="0,10,10,0" FontSize="14">RETURN TO THE HOME</Button>
+
+        <DataGrid x:Name="dgS1" Grid.Column="0" Margin="100,200,100,50" IsReadOnly="True" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" Background="Transparent">
+
+        </DataGrid>
+
+        <DataGrid x:Name="dgS2" Grid.Column="1" Margin="100,200,100,50" IsReadOnly="True" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" Background="Transparent">
+
+        </DataGrid>
+
+        <Button x:Name="gioca" Click="Gioca_Click" Grid.ColumnSpan="2" Height="75" FontSize="50" Margin="334,325,334,50">PLAY</Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,109 @@
+﻿<Window x:Class="semproli.mattia._3h.Fantacalcio.FinForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:semproli.mattia._3h.Fantacalcio"
+        mc:Ignorable="d"
+        Title="FinForm" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Window_Closing" WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.75*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="Img\IE2.jpg" Grid.ColumnSpan="2" Stretch="Fill" Opacity="0.75"></Image>
+        
+        <Button x:Name="save" Click="Save_Click" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="50" Width="90" Margin="48,0,202,20" FontSize="28">SALVA</Button>
+        <Button x:Name="modi" Click="modi_Click" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="50" Width="150" Margin="143,0,47,20" FontSize="28">MODIFICA</Button>
+
+        <DataGrid x:Name="dgGiocatori" Background="Transparent" Grid.Column="0" Height="217" SelectedCellsChanged="DgGiocatori_SelectedCellsChanged" VerticalAlignment="Top" Margin="48,15,135,0" IsReadOnly="True" CanUserReorderColumns="False" CanUserSortColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False"/>
+
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0" Height="50" FontSize="35" FontWeight="Bold" TextAlignment="Center">LA MIA FORMAZIONE</TextBlock>
+
+        <Button x:Name="forward" Foreground="White" Click="Formazione_Click" Width="50" Height="50" Grid.Column="1" Margin="230,70,174,301">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Black"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="mid1" Foreground="White" Click="Formazione_Click1" Width="50" Height="50" Grid.Column="1" Margin="268,138,136,233">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Black"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="mid2" Foreground="White" Click="Formazione_Click2" Width="50" Height="50" Grid.Column="1" Margin="192,138,212,233">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Black"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="defender" Foreground="White" Click="Formazione_Click3" Width="50" Height="50" Grid.Column="1" Margin="230,210,174,161">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Black"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="por" Foreground="White" Click="Formazione_Click4" Width="50" Height="50" Grid.Column="1" Margin="230,280,174,91">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Black"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="casacca1" Foreground="White" Click="Formazione_Click5" Width="50" Height="50" Grid.Column="1" HorizontalAlignment="Left" Margin="86,120,0,251">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Black"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="casacca2" Foreground="White" Click="Formazione_Click6" Width="50" Height="50" Grid.Column="1" HorizontalAlignment="Left" Margin="86,184,0,187">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Black"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="casacca3" Foreground="White" Click="Formazione_Click7" Width="50" Height="50" Grid.Column="1" HorizontalAlignment="Left" Margin="86,250,0,121">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="Black"/>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="back" Click="Back_Click" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="150" Height="50" Margin="56,0,0,20" FontSize="14">RETURN TO THE HOME</Button>
+
+    </Grid>
+</Window>
